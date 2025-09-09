@@ -1,7 +1,6 @@
-// cloudinaryUpload.js
 export async function uploadFileToCloudinary(file) {
-  const cloudName = 'dgfqrseb4'; // Replace with your Cloudinary cloud name
-  const unsignedUploadPreset = 'DeveloperTask'; // Replace with your Upload Preset name
+  const cloudName = process.env.REACT_APP_CLOUDINARY_CLOUD_NAME;
+  const unsignedUploadPreset = process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET; 
 
   const uploadUrl = `https://api.cloudinary.com/v1_1/${cloudName}/upload`;
 
@@ -19,5 +18,5 @@ export async function uploadFileToCloudinary(file) {
   }
 
   const data = await response.json();
-  return data.secure_url; // This is the file URL you store in your database
+  return data.secure_url;
 }
