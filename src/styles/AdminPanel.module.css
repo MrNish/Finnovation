@@ -1,0 +1,195 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-right: 16px; /* some right padding */
+}
+
+.admin-dashboard {
+  padding: 40px 24px;
+  font-family: 'Inter', sans-serif;
+  color: #dde2f0;
+  background: #09090f;
+  box-shadow: 0 8px 32px rgb(40 47 84 / 50%);
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-dashboard h1 {
+  color: #67c1e8;
+  font-weight: 700;
+  font-size: 2.6rem;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.dashboard-metrics {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 32px;
+  gap: 20px;
+}
+
+.dashboard-metrics > div {
+  background: #18192a;
+  padding: 24px 28px;
+  border-radius: 14px;
+  flex: 1;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #67c1e8;
+  text-align: center;
+  box-shadow: 0 4px 12px rgb(52 104 245 / 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-metrics > div:hover {
+  background-color: #4567c9;
+  color: white;
+  cursor: default;
+}
+
+.filters-row {
+  display: flex;
+  justify-content: flex-start;
+  gap: 18px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.filters-row select {
+  background: #18192a;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  color: #dde2f0;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 8px rgb(64 128 251 / 0.15);
+  min-width: 180px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.filters-row select:hover {
+  background-color: #2d2f53;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #18192a;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 28px rgb(52 104 245 / 0.25);
+}
+
+thead {
+  background-color: #234abc;
+  color: white;
+}
+
+thead tr th {
+  padding: 16px 22px;
+  text-align: left;
+  font-weight: 600;
+}
+
+tbody tr {
+  border-bottom: 1px solid #323448;
+  transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+  background-color: #2a2c49;
+}
+
+tbody td {
+  padding: 14px 22px;
+  color: #dde2f0;
+  font-weight: 500;
+}
+
+button.export-btn {
+  align-self: flex-start;
+  margin-top: 24px;
+  padding: 12px 30px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: linear-gradient(90deg,#3468f5 20%,#67c1e8 90%);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 3px 14px rgba(52,104,245,0.22);
+  transition: background-color 0.3s ease;
+}
+
+button.export-btn:hover {
+  background: linear-gradient(90deg,#234abc 20%,#4ba6cc 90%);
+}
+
+.loginButton, .logoutButton {
+  padding: 10px 24px;
+  background: #3468f5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 100px;
+}
+
+.loginButton:hover, .logoutButton:hover {
+  background: #234abc;
+}
+
+.admin-login-box {
+  max-width: 400px;
+  margin: 120px auto;
+  background: #18192a;
+  padding: 36px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(40,47,84,0.7);
+  text-align: center;
+  color: #dde2f0;
+  font-family: 'Inter', sans-serif;
+}
+
+.admin-login-box h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #67c1e8;
+}
+
+.admin-login-box p {
+  font-size: 1rem;
+  margin-bottom: 28px;
+  color: #a2aecb;
+}
+
+.loginButton {
+  padding: 14px 36px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: linear-gradient(90deg,#3468f5 20%,#67c1e8 90%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(64,128,251,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.loginButton:hover {
+  background: linear-gradient(90deg,#234abc 20%,#4ba6cc 90%);
+}

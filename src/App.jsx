@@ -1,22 +1,38 @@
 import React, { useState } from 'react';
 import LandingPage from './components/LandingPage';
 import MultiStepForm from './components/MultiStepForm';
+import AdminPanel from './components/AdminPanel'; // Create this component
 
 function App() {
-  const [view, setView] = React.useState('landing');
+  const [view, setView] = useState('landing');
 
   const handleAdminLogin = () => {
-    // Show admin panel, open login modal, or navigate to login page
-    setView('adminLogin');
+    setView('adminLogin'); // Navigate to admin view
+  };
+
+  const handleAdminLogout = () => {
+    setView('landing'); // Admin logout
   };
 
   return (
     <>
       {view === 'landing' && (
-        <LandingPage onRegisterClick={() => setView('form')} onAdminLogin={handleAdminLogin} />
+        <LandingPage
+          onRegisterClick={() => setView('form')}
+          onAdminLogin={handleAdminLogin}
+        />
       )}
-      {view === 'form' && <MultiStepForm />}
-      {/* Add admin login or panel view here */}
+
+      {view === 'form' && (
+        <MultiStepForm
+          onCancel={() => setView('landing')} // Optional back navigation from form
+          onComplete={() => setView('landing')} // Or wherever after submit
+        />
+      )}
+
+      {view === 'adminLogin' && (
+        <AdminPanel onLogout={handleAdminLogout} />
+      )}
     </>
   );
 }

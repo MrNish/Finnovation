@@ -8,12 +8,18 @@ const categories = [
   { label: 'Ecosystem Partner', icon: '🤝' },
 ];
 
- function LandingPage({ onRegisterClick }) {
+function LandingPage({ onRegisterClick, onAdminLogin }) {
   return (
     <div className={styles.container}>
+      {/* Header: Title left, Admin Login right */}
       <header className={styles.header}>
-        <h1 className={styles.title}>Finnovation.Tech</h1>
-        <hr className={styles.separator} />
+        <div className={styles.title}>Finnovation.Tech</div>
+        <button className={styles.loginButton} onClick={onAdminLogin}>
+          Admin Login
+        </button>
+      </header>
+
+      <main className={styles.main}>
         <h2 className={styles.subtitle}>
           Register with Finnovation – Connect, Collaborate,<br /> Co-Innovate
         </h2>
@@ -21,20 +27,20 @@ const categories = [
           Financial Institutions, Fintech Startups, Investors, and Ecosystem Partners can join
           Finnovation to explore opportunities, partnerships, and innovation.
         </p>
-      </header>
-      <section className={styles.categories}>
-        {categories.map((cat) => (
-          <div key={cat.label} className={styles.categoryCard}>
-            <span className={styles.categoryIcon}>{cat.icon}</span>
-            {cat.label}
-          </div>
-        ))}
-      </section>
-      <footer className={styles.footer}>
+
+        <section className={styles.categories}>
+          {categories.map((cat) => (
+            <div key={cat.label} className={styles.categoryCard}>
+              <span className={styles.categoryIcon}>{cat.icon}</span>
+              {cat.label}
+            </div>
+          ))}
+        </section>
+
         <button onClick={onRegisterClick} className={styles.registerButton}>
           Register Now &rarr;
         </button>
-      </footer>
+      </main>
     </div>
   );
 }

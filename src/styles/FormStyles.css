@@ -1,4 +1,3 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,28 +6,57 @@
 
 /* --- Containers --- */
 .form-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(30, 60, 114, 0.08);
+  background: linear-gradient(135deg, #181b28 0%, #23263d 100%);
+  /* Glassmorphism effect: */
+  backdrop-filter: blur(1.5px);
+  border-radius: 16px;
+  box-shadow: 0 8px 36px rgba(64,128,251,0.12), 0 1.5px 12px #23263d;
   max-width: 700px;
   margin: 40px auto;
-  padding: 32px 28px 24px;
+  padding: 40px 36px 30px;
   width: 100%;
+  color: #e0e6f5;
+  border: 1.5px solid rgba(103,193,232,0.11);
+  position: relative;
+  z-index: 1;
 }
+
+body,
+.page-bg {
+  background: linear-gradient(120deg, #12141c 40%, #181b28 76%);
+  min-height: 100vh;
+  width: 100vw;
+  /* Optionally, add a smooth noise/pattern using SVG, PNG or CSS patterns */
+}
+
+
+/* .form-card::before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  top: -16px; left: -16px; right: -16px; bottom: -16px;
+  border-radius: 24px;
+  pointer-events: none;
+  box-shadow: 0 0 36px 9px #3468f5a0;
+  opacity: 0.13;
+} */
+
 
 .center-content {
   max-width: 480px;
   margin: 56px auto;
   text-align: center;
   padding: 32px 12px;
+  color: #cbd1e3;
 }
 
 .review-card,
 .form-card.review-card {
-  background-color: #f9f9f9;
+  background-color: #1c2032; /* slightly lighter dark for contrast */
   padding: 15px;
   border-radius: 6px;
   margin-bottom: 20px;
+  color: #bac1db;
 }
 
 /* --- Typography --- */
@@ -37,12 +65,12 @@
   font-size: 1.55rem;
   font-weight: 700;
   margin-bottom: 4px;
-  color: #18204b;
+  color: #67c1e8; /* bright blue accent */
 }
 
 .form-subtitle {
   text-align: center;
-  color: #557;
+  color: #a0bff2; /* light blue */
   font-size: 1rem;
   margin-bottom: 12px;
 }
@@ -52,29 +80,29 @@
   font-weight: 600;
   font-size: 1.21rem;
   margin-bottom: 18px;
-  color: #1e4469;
+  color: #4b7bdb; /* soft accent blue */
 }
 
 .review-section-title {
   margin-top: 18px;
-  color: #222a3a;
+  color: #dde2f4;
   font-size: 1.15rem;
 }
 
 .review-label,
 .review-key {
   font-weight: 600;
-  color: #353d55;
+  color: #8fa1c7;
   margin-right: 6px;
 }
 
 .review-value {
   font-weight: 400;
-  color: #3a4761;
+  color: #abb7d3;
 }
 
 .review-file {
-  color: #6e7687;
+  color: #64728f;
   font-weight: 600;
 }
 
@@ -82,28 +110,28 @@
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 12px;
-  color: #19243e;
+  color: #7794e0;
 }
 
 .thank-desc {
   font-size: 1.07rem;
-  color: #3a4761;
+  color: #a2ade3;
   margin-bottom: 26px;
 }
 
 .email-banner {
-  background: #fff;
+  background: #1c2032;
   display: flex;
   align-items: center;
   margin: 0 auto 24px;
   border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(30, 60, 114, 0.06);
+  box-shadow: 0 2px 12px rgba(52, 104, 245, 0.1);
   padding: 16px 22px;
   max-width: 360px;
   font-size: 1rem;
-  color: #253e7b;
+  color: #7a8fc9;
   gap: 10px;
-  border: 1px solid #e0e5ed;
+  border: 1px solid #364478;
   justify-content: center;
 }
 
@@ -117,26 +145,32 @@
 .form-label {
   font-weight: 500;
   margin-bottom: 8px;
-  color: #404b69;
+  color: #95a0bd;
 }
 
 .form-input,
 .form-select,
 .form-textarea {
   padding: 9px 12px;
-  border: 1px solid #e0e5ed;
+  border: 1px solid #364478;
   border-radius: 7px;
   font-size: 1rem;
-  background: #f8fafc;
+  background: #12141d;
   outline: none;
+  color: #c1ccfe;
   transition: box-shadow 0.2s;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #6b75a1;
 }
 
 .form-input:focus,
 .form-select:focus,
 .form-textarea:focus {
-  border-color: #3468f5;
-  box-shadow: 0 2px 8px rgba(52, 104, 245, 0.10);
+  border-color: #67c1e8;
+  box-shadow: 0 2px 8px rgba(103, 193, 232, 0.5);
 }
 
 .textarea.form-textarea {
@@ -150,6 +184,7 @@
   gap: 5px;
   margin-top: 8px;
   font-size: 1rem;
+  color: #a7b0d4;
 }
 
 /* --- Buttons --- */
@@ -162,8 +197,8 @@
 }
 
 .action-btn {
-  background: #f3f6fa;
-  color: #18204b;
+  background: #2b2e47;
+  color: #abb7d3;
   border: none;
   border-radius: 7px;
   padding: 9px 22px;
@@ -186,8 +221,8 @@
 
 .action-btn:disabled,
 .verify-btn:disabled {
-  background: #eaeaea;
-  color: #b6b6c1;
+  background: #20253a;
+  color: #5c6190;
   cursor: not-allowed;
 }
 
@@ -209,7 +244,7 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: #f3f6fa;
+  background: #2b2e47;
   color: #3468f5;
   font-weight: 600;
   display: flex;
@@ -217,7 +252,7 @@
   align-items: center;
   font-size: 1.35rem;
   margin-bottom: 4px;
-  border: 2px solid #eaeaea;
+  border: 2px solid #3b416e;
   transition: background 0.2s;
 }
 
@@ -229,7 +264,7 @@
 
 .step-label {
   font-size: 0.85rem;
-  color: #888;
+  color: #7c88b8;
 }
 
 .step-circle.completed {
@@ -263,9 +298,9 @@
 
 /* --- File Upload --- */
 .upload-card-box {
-  border: 2px dashed #e0e5ed;
+  border: 2px dashed #364478;
   border-radius: 12px;
-  background: #f8fafc;
+  background: #12141d;
   min-height: 120px;
   display: flex;
   flex-direction: column;
@@ -279,25 +314,25 @@
 }
 
 .upload-card-box:hover {
-  border-color: #3468f5;
-  background: #f3f6fa;
+  border-color: #67c1e8;
+  background: #1c2032;
 }
 
 .upload-icon {
   font-size: 2.2rem;
-  color: #afb8c5;
+  color: #6175d9;
   margin-bottom: 8px;
 }
 
 .upload-desc {
-  color: #3a4360;
+  color: #a2addc;
   font-size: 1rem;
   margin-bottom: 2px;
   text-align: center;
 }
 
 .upload-note {
-  color: #737d91;
+  color: #5161a6;
   font-size: 0.98rem;
   margin-bottom: 9px;
   text-align: center;
@@ -366,3 +401,16 @@
     font-size: 0.75rem;
   }
 }
+
+.input-error {
+  border-color: #ff4d4f !important;
+  box-shadow: 0 0 5px #ff4d4f !important;
+}
+
+.error-text {
+  color: #ff4d4f;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  display: block;
+}
+
