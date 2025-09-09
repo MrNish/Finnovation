@@ -1,4 +1,3 @@
-// StepBasicDetails.jsx
 import React, { useState, useEffect } from "react";
 import { auth } from "../firebaseConfig";
 import {
@@ -310,7 +309,12 @@ export default function StepBasicDetails({ form, setForm, next }) {
           <option value="India">India</option>
           <option value="USA">USA</option>
           <option value="UK">UK</option>
-          {/* Add more countries as needed */}
+          <option value="Germany">Germany</option>
+          <option value="France">France</option>
+          <option value="Australia">Australia</option>  
+          <option value="Canada">Canada</option>
+          <option value="Singapore">Singapore</option>
+          <option value="Other">Other</option>
         </select>
         {errors.country && <small className="error-text">{errors.country}</small>}
       </div>

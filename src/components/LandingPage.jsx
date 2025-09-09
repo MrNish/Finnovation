@@ -11,7 +11,6 @@ const categories = [
 function LandingPage({ onRegisterClick, onAdminLogin }) {
   return (
     <div className={styles.container}>
-      {/* Header: Title left, Admin Login right */}
       <header className={styles.header}>
         <div className={styles.title}>Finnovation.Tech</div>
         <button className={styles.loginButton} onClick={onAdminLogin}>

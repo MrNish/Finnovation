@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebaseConfig';
-import styles from '../styles/AdminPanel.module.css'; // fixed extension
+import styles from '../styles/AdminPanel.module.css';
 
 const categories = ['Financial Institution', 'Fintech Startup', 'Investor', 'Ecosystem Partner'];
 
