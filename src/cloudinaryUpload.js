@@ -1,6 +1,6 @@
 export async function uploadFileToCloudinary(file) {
-  const cloudName = process.env.REACT_APP_CLOUDINARY_CLOUD_NAME;
-  const unsignedUploadPreset = process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET;
+  const cloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
+  const unsignedUploadPreset = import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET;
 
   const uploadUrl = `https://api.cloudinary.com/v1_1/${cloudName}/upload`;
 
