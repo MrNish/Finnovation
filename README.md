@@ -10,6 +10,10 @@ Finnovation is a **fintech innovation platform** designed to onboard and manage 
 
 It fosters seamless **collaboration**, **data collection**, and **co-innovation** through a secure multi-step registration process and an intuitive admin dashboard.
 
+## 🚀 Live Demo
+Check out the live app here: [Finnovation](https://finnovation-6x1lxa482-mrnishs-projects.vercel.app/)
+
+
 
 ## 🔥 Features
 
